@@ -7,7 +7,7 @@ services:
       - ./app:/var/www/app:cached
       - /app-vendor
     working_dir: /var/www/app
-#    user: ${UID}:${GID}
+    user: ${UID}:${GID}
 #    command: bash -c 'composer install'
     restart: always
 

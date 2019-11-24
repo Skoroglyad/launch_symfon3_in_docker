@@ -47,5 +47,9 @@ RUN docker-php-ext-configure intl \
 RUN curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/bin/composer
 
+# Node.js
+RUN curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
+RUN bash nodesource_setup.sh
+RUN apt-get install nodejs -y
 # Permission fix
 #RUN usermod -u 1000 www-data
