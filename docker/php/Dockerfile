@@ -41,7 +41,8 @@ RUN docker-php-ext-configure intl \
     && pecl install apcu \
     && docker-php-ext-enable apcu \
     && pecl install memcached \
-    && docker-php-ext-enable memcached
+    && docker-php-ext-enable memcached \
+    && docker-php-ext-install sockets
 
 #composer
 RUN curl -sS https://getcomposer.org/installer | php \

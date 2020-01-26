@@ -46,3 +46,15 @@ services:
     environment:
       PMA_HOST: my_mysql
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+
+#  rabbitmq:
+#    image: rabbitmq:3.7.5-management
+#    working_dir: /var/www/app
+#    hostname: rabbit-mq
+#    ports:
+#      - '15672:15672'
+#      - '5672:5672'
+#    environment:
+#      RABBITMQ_DEFAULT_USER: 'guest'
+#      RABBITMQ_DEFAULT_PASS: 'guest'
+#      RABBITMQ_DEFAULT_VHOST: '/'
